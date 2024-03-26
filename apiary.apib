@@ -85,69 +85,488 @@ form of choices.
 
 + Response 200 (application/json)
 
-        [
-            {
-                "code": 0,
-                "message": null,
-                "data": {
-                    "page": 1,
-                    "size": 10,
-                    "count": 2,
-                    "totalCount": 12,
-                    "content": [
-                        {
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 2,
+                "totalCount": 12,
+                "content": [
+                    {
+                        "id": 1,
+                        "title": {
+                            "en": "SLOTLESS MOTOR",
+                            "ar": "محرك بدون فتحات"
+                        },
+                        "slug": "slotless-motor",
+                        "code": "P0123456",
+                        "mpn": "A1001.4",
+                        "gtin": {
+                            "ean": "032323401",
+                            "upc": "1234567890"
+                        },
+                        "familyCode": "FM001",
+                        "image": {
                             "id": 1,
-                            "title": {
-                                "en": "SLOTLESS MOTOR",
-                                "ar": "محرك بدون فتحات"
+                            "name": "dormer-a100-primary-angle2",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "categories": {
+                            "en": "Hand Tools / Power Tools / Accessories",
+                            "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                        },
+                        "brand": {
+                            "id": 1,
+                            "name": {
+                                "en": "Dormer",
+                                "ar": "دورمير"
                             },
-                            "slug": "slotless-motor",
-                            "code": "P0123456",
-                            "mpn": "A1001.4",
-                            "gtin": {
-                                "ean": "032323401",
-                                "upc": "1234567890"
-                            },
-                            "familyCode": "FM001",
                             "image": {
                                 "id": 1,
-                                "name": "dormer-a100-primary-angle2",
-                                "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                                "name": "dormer",
+                                "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
                                 "width": 800,
                                 "height": 600,
                                 "type": "image"
-                            },
-                            "categories": {
-                                "en": "Hand Tools / Power Tools / Accessories",
-                                "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
-                            },
-                            "brand": {
-                                "id": 1,
-                                "name": {
-                                    "en": "Dormer",
-                                    "ar": "دورمير"
-                                },
-                                "image": {
-                                    "id": 1,
-                                    "name": "dormer",
-                                    "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
-                                    "width": 800,
-                                    "height": 600,
-                                    "type": "image"
-                                }
-                            },
-                            "store": {
-                                "id": 1,
-                                "name": "ABC Store"
-                            },
-                            "minPrice": 100,
-                            "maxPrice": 200,
-                            "discount": 150,
-                            "stock": 10,
-                            "isActive": true
-                        }
-                    ]
-                },
+                            }
+                        },
+                        "store": {
+                            "id": 1,
+                            "name": "ABC Store"
+                        },
+                        "minPrice": 100,
+                        "maxPrice": 200,
+                        "discount": 150,
+                        "stock": 10,
+                        "isActive": true
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+### Create a New Sale Item [POST]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
                 "timestamp": "2024-01-25 10:10:10"
             }
-        ]
+
+## Sale Item [/v1/vendor/saleItems/{id}]
+
++ Parameters
+    + id (number) - ID of the Sale Item in the form of an integer
+
+### View a Sale Item Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "id": 1,
+                "title": {
+                    "en": "SLOTLESS MOTOR",
+                    "ar": "محرك بدون فتحات"
+                },
+                "slug": "slotless-motor",
+                "code": "P0123456",
+                "mpn": "A1001.4",
+                "gtin": {
+                    "ean": "032323401",
+                    "upc": "1234567890"
+                },
+                "familyCode": "FM001",
+                "image": {
+                    "id": 1,
+                    "name": "dormer-a100-primary-angle2",
+                    "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                    "width": 800,
+                    "height": 600,
+                    "type": "image"
+                },
+                "categories": {
+                    "en": "Hand Tools / Power Tools / Accessories",
+                    "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                },
+                "brand": {
+                    "id": 1,
+                    "name": {
+                        "en": "Dormer",
+                        "ar": "دورمير"
+                    },
+                    "image": {
+                        "id": 1,
+                        "name": "dormer",
+                        "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
+                        "width": 800,
+                        "height": 600,
+                        "type": "image"
+                    }
+                },
+                "store": {
+                    "id": 1,
+                    "name": "ABC Store"
+                },
+                "minPrice": 100,
+                "maxPrice": 200,
+                "discount": 150,
+                "stock": 10,
+                "description": {
+                    "en": "<p>Subland drill with 90° included step angle, straight shank and a drilling-pilot diameter of 8.40mm with a length of 19.00mm, a large diameter of 15.00mm and an overall length of 169mm, according to DIN 8374 standard to produce a close fit through hole and conical seat for M8 countersunk-head screws, HSS and steam tempered finish for machining free machining, plain carbon and alloy steel and grey cast-iron</p>",
+                    "ar": "<p>مثقاب أرضي فرعي بزاوية خطوة متضمنة تبلغ 90 درجة، وساق مستقيمة وقطر دليل الحفر 8.40 مم وطول 19.00 مم، وقطر كبير 15.00 مم وطول إجمالي 169 مم، وفقًا لمعيار DIN 8374 لإنتاج توافق قريب من خلال الفتحة والمقعد المخروطي للبراغي ذات الرأس الغاطسة M8، وتشطيب HSS والمعالجة بالبخار للتصنيع الحر، والكربون العادي وسبائك الفولاذ والحديد الزهر الرمادي</p>"
+                },
+                "metaKeyword": "meta_keyword",
+                "metaDescription": "meta_description",
+                "galleries": [
+                    {
+                        "id": 1,
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-primary-angle2",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-secondary-side2",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-secondary-side2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-additional-front2",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-additional-front2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-dimensional-dim",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-dimensional-dim.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        }
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": {
+                            "en": "Spesification",
+                            "ar": "تخصيص"
+                        },
+                        "type": "table",
+                        "fields": [
+                            {
+                                "en": "Descriptions",
+                                "ar": "الأوصاف"
+                            },
+                            {
+                                "en": "Value 1",
+                                "ar": "قيمة"
+                            }
+                        ],
+                        "sequence": 1,
+                        "groups": [
+                            {
+                                "id": 1,
+                                "name": {
+                                    "en": "Group 1",
+                                    "ar": "مجموعة 1"
+                                },
+                                "items": [
+                                    {
+                                        "description": {
+                                            "en": "description one",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "10",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "description two",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "11",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "description three",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "11",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "name": {
+                                    "en": "Group 2",
+                                    "ar": "مجموعة 2"
+                                },
+                                "items": [
+                                    {
+                                        "description": {
+                                            "en": "description one",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "10",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "description two",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "11",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "description three",
+                                            "ar": "وصف واحد"
+                                        },
+                                        "value1": {
+                                            "en": "11",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "value2": null,
+                                        "valueUnit2": null,
+                                        "value3": null,
+                                        "valueUnit3": null,
+                                        "icon": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": {
+                            "en": "Cutting Conditions",
+                            "ar": "شروط القطع"
+                        },
+                        "type": "table",
+                        "fields": [
+                            {
+                                "en": "Name",
+                                "ar": "الأوصاف"
+                            },
+                            {
+                                "en": "Sustainability",
+                                "ar": "قيمة"
+                            },
+                            {
+                                "en": "Cutting Speed",
+                                "ar": "سرعة"
+                            },
+                            {
+                                "en": "Cutting Feed",
+                                "ar": "غير"
+                            }
+                        ],
+                        "sequence": 2,
+                        "groups": [
+                            {
+                                "id": 1,
+                                "group": {
+                                    "en": "P - Steel and cast steel(steels with alloy content ≤ 10% and a hardness of < 45HRC)",
+                                    "ar": "P - الفولاذ والفولاذ المصبوب (الفولاذ الذي يحتوي على سبائك أقل من أو يساوي 10% وصلابة أقل من 45HRC)"
+                                },
+                                "items": [
+                                    {
+                                        "description": {
+                                            "en": "P1.1 - Free machining sulfurized carbon steel with a hardness of < 240HB",
+                                            "ar": "P1.1 - تصنيع مجاني للفولاذ الكربوني المكبرت بصلابة أقل من 240HB"
+                                        },
+                                        "value1": {
+                                            "en": "Primary Use",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "",
+                                            "ar": ""
+                                        },
+                                        "value2": {
+                                            "en": "95",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit2": {
+                                            "en": "ft/min",
+                                            "ar": "سم"
+                                        },
+                                        "value3": {
+                                            "en": "0.00065",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit3": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "P1.1 - Free machining sulfurized carbon steel with a hardness of < 240HB",
+                                            "ar": "P1.1 - تصنيع مجاني للفولاذ الكربوني المكبرت بصلابة أقل من 240HB"
+                                        },
+                                        "value1": {
+                                            "en": "Primary Use",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "",
+                                            "ar": ""
+                                        },
+                                        "value2": {
+                                            "en": "95",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit2": {
+                                            "en": "ft/min",
+                                            "ar": "سم"
+                                        },
+                                        "value3": {
+                                            "en": "0.00065",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit3": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "icon": ""
+                                    },
+                                    {
+                                        "description": {
+                                            "en": "P1.1 - Free machining sulfurized carbon steel with a hardness of < 240HB",
+                                            "ar": "P1.1 - تصنيع مجاني للفولاذ الكربوني المكبرت بصلابة أقل من 240HB"
+                                        },
+                                        "value1": {
+                                            "en": "Primary Use",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit1": {
+                                            "en": "",
+                                            "ar": ""
+                                        },
+                                        "value2": {
+                                            "en": "95",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit2": {
+                                            "en": "ft/min",
+                                            "ar": "سم"
+                                        },
+                                        "value3": {
+                                            "en": "0.00065",
+                                            "ar": "ساتو"
+                                        },
+                                        "valueUnit3": {
+                                            "en": "cm",
+                                            "ar": "سم"
+                                        },
+                                        "icon": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "isActive": true
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
