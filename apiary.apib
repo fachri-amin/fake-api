@@ -1,0 +1,153 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# kanzway
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/questions]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
+
+## Sale Items Collection [/saleItems]
+
+### List All Sale Items [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "code": 0,
+                "message": null,
+                "data": {
+                    "page": 1,
+                    "size": 10,
+                    "count": 2,
+                    "totalCount": 12,
+                    "content": [
+                        {
+                            "id": 1,
+                            "title": {
+                                "en": "SLOTLESS MOTOR",
+                                "ar": "محرك بدون فتحات"
+                            },
+                            "slug": "slotless-motor",
+                            "code": "P0123456",
+                            "mpn": "A1001.4",
+                            "gtin": {
+                                "ean": "032323401",
+                                "upc": "1234567890"
+                            },
+                            "familyCode": "FM001",
+                            "image": {
+                                "id": 1,
+                                "name": "dormer-a100-primary-angle2",
+                                "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                                "width": 800,
+                                "height": 600,
+                                "type": "image"
+                            },
+                            "categories": {
+                                "en": "Hand Tools / Power Tools / Accessories",
+                                "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                            },
+                            "brand": {
+                                "id": 1,
+                                "name": {
+                                    "en": "Dormer",
+                                    "ar": "دورمير"
+                                },
+                                "image": {
+                                    "id": 1,
+                                    "name": "dormer",
+                                    "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
+                                    "width": 800,
+                                    "height": 600,
+                                    "type": "image"
+                                }
+                            },
+                            "store": {
+                                "id": 1,
+                                "name": "ABC Store"
+                            },
+                            "minPrice": 100,
+                            "maxPrice": 200,
+                            "discount": 150,
+                            "stock": 10,
+                            "isActive": true
+                        }
+                    ]
+                },
+                "timestamp": "2024-01-25 10:10:10"
+            }
+        ]
