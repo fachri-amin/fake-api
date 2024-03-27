@@ -1385,3 +1385,53 @@ form of choices.
             },
             "timestamp": "2024-01-25 10:10:10"
         }
+        
+## Brand Collection [/v1/admin/brands]
+
+### List All Reviews [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 2,
+                "totalCount": 12,
+                "content": [
+                    {
+                        "id": 1,
+                        "name": {
+                            "en": "Baluff",
+                            "ar": "بالوف"
+                        },
+                        "slug": "baluff",
+                        "image": {
+                            "id": 1,
+                            "name": "Baluff",
+                            "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "bwImage": {
+                            "id": 1,
+                            "name": "Baluff",
+                            "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "description": {
+                            "en": "lorem ipsum lorem ipsum lorem ipsum",
+                            "ar": "أدوات القياس"
+                        },
+                        "showHomepage": true,
+                        "status": "active"
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
