@@ -1503,3 +1503,33 @@ form of choices.
             },
             "timestamp": "2024-01-25 10:10:10"
         }
+        
+## Store Collection [/v1/vendor/stores]
+
+### List All Store [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 2,
+                "totalCount": 12,
+                "content": [
+                    {
+                        "id": 1,
+                        "code": "001",
+                        "name": "ABC Store",
+                        "address": "Jalan ABC No 1 Bandung",
+                        "city": "Bandung",
+                        "country": "Indonesia",
+                        "long": "8837455",
+                        "lat": "488444"
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
