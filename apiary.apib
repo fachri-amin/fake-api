@@ -1312,3 +1312,295 @@ form of choices.
             },
             "timestamp": "2024-01-25 10:10:10"
         }
+        
+## Product Collections Collection [/v1/vendor/product-collections]
+
+### List All Product Collections [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 2,
+                "totalCount": 12,
+                "content": [
+                    {
+                        "id": 1,
+                        "code": "001",
+                        "name": "Collection One",
+                        "description": "lorem ipsum",
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-primary-angle2",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "category": "Collection Category",
+                        "status": "active",
+                        "products": [
+                            {
+                                "id": 1,
+                                "title": {
+                                    "en": "SLOTLESS MOTOR",
+                                    "ar": "محرك بدون فتحات"
+                                }
+                            },
+                            {
+                                "id": 2,
+                                "title": {
+                                    "en": "Subland Drill",
+                                    "ar": "محرك بدون فتحات"
+                                }
+                            }
+                        ] 
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+### Create a New Product Collection [POST]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
+
+## Product Collection [/v1/vendor/product-collections/{id}]
+
++ Parameters
+    + id (number) - ID of the Product Collection in the form of an integer
+
+### View a Product Collection Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "id": 1,
+                "code": "001",
+                "name": "Collection One",
+                "description": "lorem ipsum",
+                "image": {
+                    "id": 1,
+                    "name": "dormer-a100-primary-angle2",
+                    "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                    "width": 800,
+                    "height": 600,
+                    "type": "image"
+                },
+                "category": "Collection Category",
+                "status": "active",
+                "products": [
+                    {
+                        "id": 1,
+                        "title": {
+                            "en": "Jobber Drill Diameter 0.413 inch",
+                            "ar": "بدون اسم 1"
+                        },
+                        "slug": "dormer-a100z-a100-jobber-drill",
+                        "code": "P0123456",
+                        "mpn": "A100Z",
+                        "gtin": {
+                            "ean": "7320760029619",
+                            "upc": "73207600296"
+                        },
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-primary-angle2.png",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "description": {
+                            "en": "<p>Subland drill with 90° included step angle, straight shank and a drilling-pilot diameter of 8.40mm with a length of 19.00mm, a large diameter of 15.00mm and an overall length of 169mm, according to DIN 8374 standard to produce a close fit through hole and conical seat for M8 countersunk-head screws, HSS and steam tempered finish for machining free machining, plain carbon and alloy steel and grey cast-iron</p>",
+                            "ar": "<p>مثقاب أرضي فرعي بزاوية خطوة متضمنة تبلغ 90 درجة، وساق مستقيمة وقطر دليل الحفر 8.40 مم وطول 19.00 مم، وقطر كبير 15.00 مم وطول إجمالي 169 مم، وفقًا لمعيار DIN 8374 لإنتاج توافق قريب من خلال الفتحة والمقعد المخروطي للبراغي ذات الرأس الغاطسة M8، وتشطيب HSS والمعالجة بالبخار للتصنيع الحر، والكربون العادي وسبائك الفولاذ والحديد الزهر الرمادي</p>"
+                        },
+                        "metaKeyword": "meta_keyword",
+                        "metaDescription": "meta_description",
+                        "categories": {
+                            "en": "Hand Tools / Power Tools / Accessories",
+                            "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                        },
+                        "brand": {
+                            "id": 1,
+                            "name": {
+                                "en": "Dormer",
+                                "ar": "دورمير"
+                            },
+                            "image": {
+                                "id": 1,
+                                "name": "dormer",
+                                "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
+                                "width": 800,
+                                "height": 600,
+                                "type": "image"
+                            }
+                        },
+                        "price": 240,
+                        "originalPrice": 280,
+                        "maxPrice": 321
+                    },
+                    {
+                        "id": 2,
+                        "title": {
+                            "en": "Jobber Drill Diameter 0.061 inch",
+                            "ar": "بدون اسم 2"
+                        },
+                        "slug": "dormer-a100z-a100-jobber-drill",
+                        "code": "P0123456",
+                        "mpn": "A1001.55",
+                        "gtin": {
+                            "ean": "7320760000434",
+                            "upc": "73207600004"
+                        },
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-primary-angle2.png",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "description": {
+                            "en": "<p>Subland drill with 90° included step angle, straight shank and a drilling-pilot diameter of 8.40mm with a length of 19.00mm, a large diameter of 15.00mm and an overall length of 169mm, according to DIN 8374 standard to produce a close fit through hole and conical seat for M8 countersunk-head screws, HSS and steam tempered finish for machining free machining, plain carbon and alloy steel and grey cast-iron</p>",
+                            "ar": "<p>مثقاب أرضي فرعي بزاوية خطوة متضمنة تبلغ 90 درجة، وساق مستقيمة وقطر دليل الحفر 8.40 مم وطول 19.00 مم، وقطر كبير 15.00 مم وطول إجمالي 169 مم، وفقًا لمعيار DIN 8374 لإنتاج توافق قريب من خلال الفتحة والمقعد المخروطي للبراغي ذات الرأس الغاطسة M8، وتشطيب HSS والمعالجة بالبخار للتصنيع الحر، والكربون العادي وسبائك الفولاذ والحديد الزهر الرمادي</p>"
+                        },
+                        "metaKeyword": "meta_keyword",
+                        "metaDescription": "meta_description",
+                        "categories": {
+                            "en": "Hand Tools / Power Tools / Accessories",
+                            "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                        },
+                        "brand": {
+                            "id": 1,
+                            "name": {
+                                "en": "Dormer",
+                                "ar": "دورمير"
+                            },
+                            "image": {
+                                "id": 1,
+                                "name": "dormer",
+                                "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
+                                "width": 800,
+                                "height": 600,
+                                "type": "image"
+                            }
+                        },
+                        "price": 255,
+                        "originalPrice": null,
+                        "maxPrice": null
+                    },
+                    {
+                        "id": 3,
+                        "title": {
+                            "en": "Jobber Drill Diameter 0.063 inch",
+                            "ar": "بدون اسم 3"
+                        },
+                        "slug": "dormer-a100z-a100-jobber-drill",
+                        "code": "P0123433",
+                        "mpn": "A1001.6",
+                        "gtin": {
+                            "ean": "7320760000441",
+                            "upc": "0760000441"
+                        },
+                        "image": {
+                            "id": 1,
+                            "name": "dormer-a100-primary-angle2.png",
+                            "url": "https://kanzway.com:3465/v1/images/download/dormer-a100-primary-angle2.png",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "description": {
+                            "en": "<p>Subland drill with 90° included step angle, straight shank and a drilling-pilot diameter of 8.40mm with a length of 19.00mm, a large diameter of 15.00mm and an overall length of 169mm, according to DIN 8374 standard to produce a close fit through hole and conical seat for M8 countersunk-head screws, HSS and steam tempered finish for machining free machining, plain carbon and alloy steel and grey cast-iron</p>",
+                            "ar": "<p>مثقاب أرضي فرعي بزاوية خطوة متضمنة تبلغ 90 درجة، وساق مستقيمة وقطر دليل الحفر 8.40 مم وطول 19.00 مم، وقطر كبير 15.00 مم وطول إجمالي 169 مم، وفقًا لمعيار DIN 8374 لإنتاج توافق قريب من خلال الفتحة والمقعد المخروطي للبراغي ذات الرأس الغاطسة M8، وتشطيب HSS والمعالجة بالبخار للتصنيع الحر، والكربون العادي وسبائك الفولاذ والحديد الزهر الرمادي</p>"
+                        },
+                        "metaKeyword": "meta_keyword",
+                        "metaDescription": "meta_description",
+                        "categories": {
+                            "en": "Hand Tools / Power Tools / Accessories",
+                            "ar": "أدوات القياس / نسشتيا  ظ مشسنيتم "
+                        },
+                        "brand": {
+                            "id": 1,
+                            "name": {
+                                "en": "Dormer",
+                                "ar": "دورمير"
+                            },
+                            "image": {
+                                "id": 1,
+                                "name": "dormer",
+                                "url": "https://kanzway.com:3465/v1//images/download/L14461.gif",
+                                "width": 800,
+                                "height": 600,
+                                "type": "image"
+                            }
+                        },
+                        "price": 233,
+                        "originalPrice": null,
+                        "maxPrice": 254
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+### Delete a Product Collection [DELETE]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
+            
+### Update a Product Collection [PUT]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
