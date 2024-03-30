@@ -1821,3 +1821,155 @@ form of choices.
                 "data": {},
                 "timestamp": "2024-01-25 10:10:10"
             }
+            
+## Catalogues Collection [/v1/admin/catalogues]
+
+### List All Catalogues [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 2,
+                "totalCount": 12,
+                "content": [
+                    {
+                        "id": 1,
+                        "code": "001",
+                        "title": {
+                            "en": "Connecting Manufacturers and Buyers Around the World",
+                            "ar": "ربط المصنعين والمشترين في جميع أنحاء العالم"
+                        },
+                        "slug": "connecting-manufacturers-and-buyers-around-the-world",
+                        "date": "2021-10-10",
+                        "thumbnail": {
+                            "id": 1,
+                            "name": "Blog One",
+                            "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                            "width": 800,
+                            "height": 600,
+                            "type": "image"
+                        },
+                        "file": {
+                            "id": 1,
+                            "name": "Catalouge Two",
+                            "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                            "type": "pdf"
+                        },
+                        "description": {
+                            "en": "<p>Connecting Manufacturers and Buyers Around the World<p>",
+                            "ar": "<p>ربط المصنعين والمشترين في جميع أنحاء العالم</p>"
+                        },
+                        "status": "publish"
+                    }
+                ]
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+### Create a New Catalogues [POST]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
+
+## Sale Item [/v1/admin/catalogues/{id}]
+
++ Parameters
+    + id (number) - ID of the Catalogue in the form of an integer
+
+### View a Catalogue Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "id": 1,
+                "code": "001",
+                "title": {
+                    "en": "Connecting Manufacturers and Buyers Around the World",
+                    "ar": "ربط المصنعين والمشترين في جميع أنحاء العالم"
+                },
+                "slug": "connecting-manufacturers-and-buyers-around-the-world",
+                "date": "2021-10-10",
+                "thumbnail": {
+                    "id": 1,
+                    "name": "Blog One",
+                    "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                    "width": 800,
+                    "height": 600,
+                    "type": "image"
+                },
+                "file": {
+                    "id": 1,
+                    "name": "Catalouge Two",
+                    "url": "https://www.kanzway.sa:3465/img/list-1.jpg",
+                    "type": "pdf"
+                },
+                "metaDescription": "metaDescription",
+                "metaKeyword": "metaKeyword",
+                "description": {
+                    "en": "<p>Connecting Manufacturers and Buyers Around the World<p>",
+                    "ar": "<p>ربط المصنعين والمشترين في جميع أنحاء العالم</p>"
+                },
+                "status": "publish"
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+### Delete a Catalogue [DELETE]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
+            
+### Update a Catalogue [PUT]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
