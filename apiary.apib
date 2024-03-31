@@ -2043,3 +2043,63 @@ form of choices.
             ],
             "timestamp": "2024-01-25 10:10:10"
         }
+        
+## Dashboard [/v1/vendor/dashboard/sumary]
+
+### View a Vendor Dashboard Summary [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "product": {
+                    "last_updated": "2024-03-12",
+                    "total_products": 1000,
+                    "increase": 5,
+                    "decrease": 0
+                },
+                "transaction": {
+                    "last_updated": "2024-03-12",
+                    "total_transaction": 923,
+                    "increase": 5,
+                    "decrease": 0
+                },
+                "order": {
+                    "last_updated": "2024-03-12",
+                    "total_transaction": 863,
+                    "on_going": 10
+                }
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+## Dashboard Chart [/v1/vendor/dashboard/analytics]
+
+### View a Vendor Dashboard Analytics [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "product_sold": 17500,
+                "total_transaction": 1000,
+                "total_order": 4323,
+                "charts":{
+                    "2": {
+                        "product_sold": 100,
+                        "total_transaction": 200,
+                        "total_order": 234
+                    },
+                    "3": {
+                        "product_sold": 200,
+                        "total_transaction": 240,
+                        "total_order": 345
+                    }
+                }
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
