@@ -1973,3 +1973,73 @@ form of choices.
                 "data": {},
                 "timestamp": "2024-01-25 10:10:10"
             }
+
+## Dashboard [/v1/admin/dashboard/sumary]
+
+### View a Dashboard Summary [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "total_transaction": 110000,
+                "total_vendor": 1200000,
+                "total_order": 200000,
+                "on_progress_order": 1500
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+## Dashboard Chart [/v1/admin/dashboard/chart]
+
+### View a Dashboard Chart [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "total_transaction": 17500,
+                "charts":{
+                    "2": 100,
+                    "3": 120,
+                    "4": 102
+                }
+            },
+            "timestamp": "2024-01-25 10:10:10"
+        }
+        
+## Dashboard Vendor [/v1/admin/dashboard/vendor]
+
+### View a Dashboard Vendor [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": [
+                {
+                    "id": 1,
+                    "code": "001",
+                    "type": "seller",
+                    "username": "Vodjo",
+                    "firstName": "Charlie",
+                    "lastName": "Susan",
+                    "profilePicture": "https://www.kanzway.com/principals/001.png"
+                },
+                {
+                    "id": 2,
+                    "code": "003",
+                    "type": "manufacture",
+                    "username": "Firecode",
+                    "firstName": "Jhon",
+                    "lastName": "Doe",
+                    "profilePicture": "https://www.kanzway.com/principals/001.png"
+                }
+            ],
+            "timestamp": "2024-01-25 10:10:10"
+        }
