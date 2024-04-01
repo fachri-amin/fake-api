@@ -1890,7 +1890,7 @@ form of choices.
                 "timestamp": "2024-01-25 10:10:10"
             }
 
-## Sale Item [/v1/admin/catalogues/{id}]
+## Catalogue [/v1/admin/catalogues/{id}]
 
 + Parameters
     + id (number) - ID of the Catalogue in the form of an integer
@@ -2103,3 +2103,73 @@ form of choices.
             },
             "timestamp": "2024-01-25 10:10:10"
         }
+
+## Contact Us Collection [/v1/admin/contact-us]
+
+### List All Contact Us [GET]
+
++ Response 200 (application/json)
+
+        {
+            "code": 0,
+            "message": null,
+            "data": {
+                "page": 1,
+                "size": 10,
+                "count": 1,
+                "totalCount": 2,
+                "content": [
+                    {
+                        "id": 1,
+                        "name": "Jhon",
+                        "email": "jhon@gmail.com",
+                        "phoneNumber": "08577636484",
+                        "subject": "Hello kanzway",
+                        "message": "Thank for support",
+                        "status":"unread"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Budi",
+                        "email": "buid@gmail.com",
+                        "phoneNumber": "0857763648455",
+                        "subject": "Hello kanzway",
+                        "message": "Thank for support",
+                        "status":"read"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Susan",
+                        "email": "susan@gmail.com",
+                        "phoneNumber": "0857763648455",
+                        "subject": "Hello kanzway",
+                        "message": "Thank for support",
+                        "status":"replied"
+                    }
+                ]
+            }
+        }
+         
+## Contacu Us [/v1/admin/contact-us/{id}]
+
++ Parameters
+    + id (number) - ID of the Contact Us in the form of an integer
+
+### Update a Catalogue [PUT]
+
++ Request (application/json)
+
+        {
+
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "code": 0,
+                "message": null,
+                "data": {},
+                "timestamp": "2024-01-25 10:10:10"
+            }
